@@ -151,7 +151,7 @@ So here, our returned functions provides some capability that JavaScript objects
 ```js
 
   class Item {
-    constructor(manufacturePrice, marketType){
+    constructor(name, manufacturePrice){
       this.name = name
       this.manufacturePrice = manufacturePrice
     }
@@ -169,7 +169,7 @@ So here, our returned functions provides some capability that JavaScript objects
   // {name:  'tennis shoe', manufacturePrice: 4}
 ```
 
- But we our attributes can be made truly private when using a closure.  
+ But our attributes can be made truly private when using a closure.  
 
  ```js
  function retailPriceMaker(manufacturePrice){
@@ -190,7 +190,7 @@ Another use case for closures occurs when we declare our classes.  Because JavaS
 
 let ItemId = 0
 class Item {
-  constructor(manufacturePrice){
+  constructor(name, manufacturePrice){
     this.name = name
     this.manufacturePrice = manufacturePrice
     this.id = ++ItemId;
@@ -209,7 +209,7 @@ function createItem(){
   let ItemId = 0
   // return the class
   return class {
-    constructor(manufacturePrice){
+    constructor(name, manufacturePrice){
       this.name = name
       this.manufacturePrice = manufacturePrice
       this.id = ++ItemId;
